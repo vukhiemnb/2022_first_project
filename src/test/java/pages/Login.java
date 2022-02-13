@@ -20,6 +20,8 @@ public class Login {
 		driver.findElement(password_field).clear();
 		driver.findElement(password_field).sendKeys(password);
 		driver.findElement(button_login).click();
+		System.out.println("username: " + username);
+		System.out.println("password: " + password);
 	}
 	
 }
