@@ -15,8 +15,9 @@ Background:
   When Enter username as <username> and password as <password>
   And Click button login on login page
   Then Error message with content <message_content> is displayed
+  And Take screenshot with name as <evidence_name>
   Examples:
-  |username|password|message_content|
-  |""|""|"この項目は入力が必須です。"|
-  |""|"abc"|"この項目は入力が必須です。"|
-  |"incorrect"|"incorrect"|"ユーザーIDまたはパスワードが間違っています"|
+  |username|password|message_content|evidence_name|
+  |""|""|"この項目は入力が必須です。"|"login with null input"|
+  |""|"abc"|"この項目は入力が必須です。"|"login with blank username"|
+  |"incorrect"|"incorrect"|"ユーザーIDまたはパスワードが間違っています"|"login with invalid credential"|

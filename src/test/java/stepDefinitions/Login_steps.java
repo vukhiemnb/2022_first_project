@@ -76,8 +76,14 @@ public class Login_steps {
 	    Assert.assertTrue(count_message>0);
 	}
 	
-//	@After
-//	public void close_window() {
-//		driver.quit();
-//	}
+	@Then("^Take screenshot with name as \"(.*)\"")
+	public void take_snap_shot_with_name_as(String name) throws Exception {
+		Thread.sleep(1000);
+		Reusable_functions.take_screenshot(driver, "D:\\Auto Test\\test images", name);		
+	}
+	
+	@After
+	public void close_window() throws Exception {
+		driver.quit();
+	}
 }
