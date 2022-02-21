@@ -6,11 +6,9 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import bsh.Console;
 import data.Test_accounts;
 import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
@@ -40,7 +38,8 @@ public class Login_steps {
 
 	@When("Click button login on login page")
 	public void click_button_login_on_login_page() {
-	    
+		Login init_login	= new Login(driver);
+		init_login.click_button_login();
 	}
 
 	@Then("Login successfully")

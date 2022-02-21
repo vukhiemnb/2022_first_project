@@ -24,4 +24,8 @@ public class Login {
 		System.out.println("password: " + password);
 	}
 	
+	public void click_button_login() {
+		driver.findElement(button_login).click();
+	}
+	
 }

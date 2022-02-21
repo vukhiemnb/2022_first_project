@@ -1,12 +1,15 @@
 package runners;
 
-//import org.junit.runner.RunWith;
-//
-//import io.cucumber.junit.Cucumber;
-//import io.cucumber.testng.CucumberOptions;
-//
-//@RunWith(Cucumber.class)				
-//@CucumberOptions(features="testCases",glue={"stepDefinitions"})
+import org.junit.runner.RunWith;
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+
+@RunWith(Cucumber.class)				
+@CucumberOptions(
+		features="src/test/java/testCases",
+		glue={"stepDefinitions"},
+		monochrome=true)
 public class First_Runner {
 
 }
