@@ -5,6 +5,7 @@ import java.sql.Time;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 
 import org.apache.commons.io.FileUtils;
 import org.json.JSONObject;
@@ -169,6 +170,17 @@ public class Reusable_functions {
 		    JSONObject jsonObject 	= new JSONObject(input_json_string);
 		    return jsonObject;
 		
+	}
+	
+	/*This function will navigate browser to specific tab
+	 * @param tab_number
+	 */
+	public static void switch_to_tab(WebDriver driver, int tab_number) throws InterruptedException {
+		//switch tab
+		//get all opened tabs
+		ArrayList<String> all_tabs	= new ArrayList<String>(driver.getWindowHandles());
+		//switch to new tab
+		driver.switchTo().window(all_tabs.get(tab_number + 1));
 	}
 	
 }
